@@ -10,6 +10,7 @@ gunicorn = "*"
 dj-database-url = "*"
 django-crispy-forms = "*"
 pillow = "*"
+pylint = "*"
 
 [dev-packages]
 
