@@ -11,6 +11,7 @@ dj-database-url = "*"
 django-crispy-forms = "*"
 pillow = "*"
 pylint = "*"
+whitenoise = "*"
 
 [dev-packages]
 
