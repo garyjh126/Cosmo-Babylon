@@ -1,19 +1,19 @@
 [[source]]
-url = "https://pypi.python.org/simple"
-verify_ssl = true
 name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pylint = "*"
 
 [packages]
 django = "*"
-psycopg2-binary = "*"
 gunicorn = "*"
 dj-database-url = "*"
 django-crispy-forms = "*"
 pillow = "*"
-pylint = "*"
 whitenoise = "*"
-
-[dev-packages]
+psycopg2-binary = "*"
 
 [requires]
-python_version = "3.7"
+python_version = "3.6"
