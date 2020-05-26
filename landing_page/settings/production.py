@@ -120,6 +120,9 @@ USE_L10N = True
 
 USE_TZ = True
 
+MIDDLEWARE_CLASSES = (
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+)
 
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
