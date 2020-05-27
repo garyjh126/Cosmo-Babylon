@@ -36,8 +36,8 @@ ALLOWED_HOSTS = ['landingpage987.herokuapp.com', '.cosmobabylon.com']
 # DEFAULT_FROM_EMAIL = "Gary <garyjh126@gmail.com>"
 
 
-ADMINS = [('garyjh126', EMAIL_HOST_USER)]
-MANAGERS = ADMINS
+# ADMINS = [('garyjh126', EMAIL_HOST_USER)]
+# MANAGERS = ADMINS
 
 # Application definition
 
