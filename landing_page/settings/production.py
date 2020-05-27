@@ -26,8 +26,18 @@ SECRET_KEY = 'xoi+a030g1m*ngqw-*+hnp1jy@na@wnzn)iqi*0%3v+@@m41@1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['landingpage987.herokuapp.com']
+ALLOWED_HOSTS = ['landingpage987.herokuapp.com', '.cosmobabylon.com']
 
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_HOST_USER = 'garyjh126@gmail.com' #my gmail username
+# EMAIL_HOST_PASSWORD = 'password' #my gmail password
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+# DEFAULT_FROM_EMAIL = "Gary <garyjh126@gmail.com>"
+
+
+ADMINS = [('garyjh126', EMAIL_HOST_USER)]
+MANAGERS = ADMINS
 
 # Application definition
 
