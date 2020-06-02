@@ -16,6 +16,13 @@
     <title>Hello world</title>
   </head>
   <body>
+    {% if messages %}
+      <div class="alert alert-warning">
+        {% for message in messages %}
+          {{ message }}<br/>
+        {% endfor %}
+      </div>
+    {% endif %}
     {% block content %}
 
     {% endblock %}
