@@ -63,7 +63,11 @@
         <div class="col-md-4">
             <h2>Join Us</h2>
             <p>
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdvO3_pjNP13E8z90IGTGfR_ht54z4Ry4DBSyIQbw22LCMbIg/viewform?embedded=true" width="250" height="400" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                <form method = "POST" action=""> {% csrf_token %}
+                    {{ form.as_p }}
+                <input type="submit" value = "join" class= "btn btn-default"/>
+
+                </form>
             </p>
         </div>
       </div>
