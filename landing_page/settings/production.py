@@ -149,6 +149,7 @@ STATICFILES_DIRS = [
 # The absolute path to the directory where collectstatic will collect static files for deployment.
 STATIC_ROOT = os.path.join(BASE_DIR, "live-static", "static-root") 
 
+# BUG: Whitenoise produces a server error 500 on the live site. 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 #STATIC_ROOT = "/home/cfedeploy/webapps/cfehome_static_root/"
