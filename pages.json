@@ -1,4 +1,5 @@
-[{
+[
+{
     "model": "pages.page",
     "pk": 1,
     "fields": {
@@ -8,4 +9,5 @@
         "title_btn_url": "MailingList",
         "content": "<div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h2>Heading</h2>\r\n        <p>Gary Harney eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>\r\n        <p><a class=\"btn btn-secondary\" href=\"#\" role=\"button\">View details &raquo;</a></p>\r\n      </div>\r\n      <div class=\"col-md-4\">\r\n        <h2>Heading</h2>\r\n        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>\r\n        <p><a class=\"btn btn-secondary\" href=\"#\" role=\"button\">View details &raquo;</a></p>\r\n      </div>\r\n      <div class=\"col-md-4\">\r\n        <h2>Heading</h2>\r\n        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>\r\n        <p><a class=\"btn btn-secondary\" href=\"#\" role=\"button\">View details &raquo;</a></p>\r\n      </div>\r\n    </div>"
     }
-}]
+}
+]
