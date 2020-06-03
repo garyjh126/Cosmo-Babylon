@@ -1,55 +1,64 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% block content %}
 
-{% block content %}
-
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <div class="container">
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container">
         <a class="navbar-brand" href="#">Cosmo Babylon</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-      </div>
-    </nav>
-    
-    <main role="main">
-  
+    </div>
+</nav>
+
+<main role="main">
+
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
-      <div class="container">
-        <h1 class="display-3">{{ page_obj.title }}</h1>
-        <p>{{ page_obj.title_description|linebreaks }}</p>
-          {% if page_obj.title_btn_url %}
-          <p><a class="btn btn-primary btn-lg" href="{{ title_btn_url }}" role="button">{{ page_obj.title_button }} &raquo;</a></p>
-        {% endif %}
-      </div>
-    </div>
-  
-    <div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-4">
-          <h2>Join Us</h2>
-            <p>
-              <form method = "POST" action=""> {% csrf_token %}
-                  {{ form.as_p }}
-                <input type="submit" class="btn btn-default" value="Submit Button">
-              </form>
-            </p>
+        <div class="container">
+            <h1 class="display-3">{{ page_obj.title }}</h1>
+            <p>{{ page_obj.title_description|linebreaks }}</p>
+            <!-- {% if page_obj.title_btn_url %}
+            <p><a class="btn btn-primary btn-lg" href="{{ title_btn_url }}" role="button">{{ page_obj.title_button }} &raquo;</a></p>
+            {% endif %} -->
         </div>
-      </div>
     </div>
+
     <div class="container">
-      {{ page_obj.content|safe }}
-  
-    </div> 
+        <!-- Example row of columns -->
+        <div class="input-group input-group-lg m-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-lg">Join us</span>
+            </div>
+
+            <input type="text" placeholder="Your Email" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+            <form method="POST" action="">{% csrf_token %}
+                <!-- <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                    <button type="submit" class="btn btn-primary">Join</button>
+                </div> -->
+                <!-- <span class="input-group-btn">
+                    <input type="submit" class="btn btn-default" value="Join">
+                </span> -->
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+
+
+
+    </div>
+
+    <div class="container">
+        {{ page_obj.content|safe }}
+
+    </div>
 
     <hr>
 
     <div class="container">
-      <footer>
-        <p>&copy; 2020 Cosmo Babylon, Inc</p>
-      </footer>
-    </div> 
+        <footer>
+            <p>&copy; 2020 Cosmo Babylon, Inc</p>
+        </footer>
+    </div>
 
 
-{% endblock content %}
+    {% endblock content %}
