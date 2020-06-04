@@ -15,6 +15,7 @@ pillow = "*"
 whitenoise = "*"
 psycopg2-binary = "*"
 pylint-django = "*"
+djangorestframework = "*"
 
 [requires]
 python_version = "3.6"
