@@ -1,4 +1,7 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %}
+{% block styles %}{% if page_obj.nav_color != '#000000' %}.navbar-inverse{
+    background-color: {{ page_obj.nav_color }};
+    }{% endif %}{% endblock %}{% block content %}
 
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container">
@@ -41,4 +44,4 @@
     </div>
 
 
-    {% endblock content %}
+{% endblock content %}
