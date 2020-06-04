@@ -1,24 +1,21 @@
 {% extends "base.html" %} {% block content %}
-
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <div class="container">
-        <a class="navbar-brand" href="#">Cosmo Babylon</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-    </div>
-</nav>
-
 <main role="main">
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
         <div class="container">
-            <h1 class="display-3">{{ page_obj.title }}</h1>
-            <p>{{ page_obj.title_description|linebreaks }}</p>
-            <!-- {% if page_obj.title_btn_url %}
+            <div class="row justify-content-center">
+
+                <div class="col-sm-6">
+                    <h1 class="display-3 offset-1">{{ page_obj.title }}</h1>
+                    <div class="offset-3">
+                        <p>{{ page_obj.title_description|linebreaks }}</p>
+                    </div>
+                    <!-- {% if page_obj.title_btn_url %}
             <p><a class="btn btn-primary btn-lg" href="{{ title_btn_url }}" role="button">{{ page_obj.title_button }} &raquo;</a></p>
             {% endif %} -->
+                </div>
+            </div>
         </div>
     </div>
 
