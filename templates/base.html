@@ -14,13 +14,21 @@
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
 
     <link rel="shortcut icon" type="image/png" href="{% static 'favicon.png' %}" />
-    
+
 
 
     <title>Cosmo Babylon</title>
 
-    <style type="text/css">{% block styles %}{% endblock %}</style>
-    
+    <style type="text/css">
+        {
+            % block styles %
+        }
+        
+        {
+            % endblock %
+        }
+    </style>
+
 </head>
 
 <body>
@@ -30,11 +38,7 @@
             {% for message in messages %} {{ message }}<br/> {% endfor %}
         </div>
     </div>
-    {% endif %}
-    
-    {% block content %} 
-    
-    {% endblock %}
+    {% endif %} {% block content %} {% endblock %}
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
