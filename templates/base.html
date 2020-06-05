@@ -53,6 +53,7 @@
 
             $(".join-form").submit(function(e) {
                 e.preventDefault()
+                var this_ = $(this)
                 var joinEmailAPIEndpoint = "{% url 'email-join' %}";
 
                 $.ajax({
@@ -62,13 +63,11 @@
                     success: function(data) {
                         didSignUp = true;
                         $marketingModal.modal('hide');
-                        $(".join-form").parent().html("<p class='lead'>Success! Thanks for joining</p>")
+                        this_.parent().html("<p class='lead'>Success! Thanks for joining</p>")
                     },
                     error: function(data) {
-                        console.log("error")
-                        console.log(data)
-                        $(".join-form-alert").fadeIn();
-                        $(".join-form-error").text(data.responseJSON.email[0])
+                        this_.find(".join-form-alert").fadeIn();
+                        this_.find(".join-form-error").text(data.responseJSON.email[0])
                     }
                 });
 
