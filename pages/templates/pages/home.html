@@ -1,53 +1,35 @@
-{% extends "base.html" %} {% block content %} {% include 'navbar.html' %}
-<main role="main">
+{% extends "base.html" %} 
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-        <div class="container">
-            <div class="row justify-content-center">
+{% block content %} 
 
-                <div class="col-sm-6">
-                    <h1 class="display-3 offset-1">{{ page_obj.title }}</h1>
-                    <div class="offset-3">
-                        <p>{{ page_obj.title_description|linebreaks }}</p>
-                    </div>
-                    <!-- {% if page_obj.title_btn_url %}
-            <p><a class="btn btn-primary btn-lg" href="{{ title_btn_url }}" role="button">{{ page_obj.title_button }} &raquo;</a></p>
-            {% endif %} -->
-                </div>
-            </div>
-        </div>
-    </div>
+<main role="main"></main>
 
-    <div class="container">
-        <!-- Example row of columns -->
-        {% include 'pages/snippet/join-form.html' with form=form%}
-    </div>
+{% include 'navbar.html' %}
 
-    <div class="container">
-        {{ page_obj.content|safe }}
+{% include 'header.html' %}
 
-    </div>
+<div id="main">
 
-    <hr>
+    {% include 'about.html' %}
+    
+    {% include 'recent_work.html' %}
 
-    <div class="container">
-        <div class="row">
-            <div class="col-sm 3">
-                <footer>
-                    <p>&copy; 2020 Cosmo Babylon, Inc</p>
-                </footer>
-            </div>
-            <div class="col-sm 3">
-                <footer>
-                    <p>Email: garyharney@cosmobabylon.com </p>
-                    <p>Phone number: +61 472724025 </p>
-                </footer>
-            </div>
-        </div>
+    {% include 'contact.html' %}
+
+    {% include 'footer.html' %}
+
+</div>
 
 
-    </div>
 
 
-    {% endblock content %}
+    <!-- 
+    
+ 
+
+    -->
+
+
+
+
+{% endblock content %}
