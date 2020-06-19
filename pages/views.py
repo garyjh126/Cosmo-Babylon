@@ -2,7 +2,7 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.shortcuts import render
 from django.views.generic import View, FormView, CreateView
 
-from newsletter.forms import JoinForm
+from contacts.forms import ContactForm
 from .models import Page
 
 # class HomeView(View):
@@ -11,7 +11,7 @@ from .models import Page
 
 class HomeView(SuccessMessageMixin ,CreateView):
     template_name = 'pages/home.html'
-    form_class = JoinForm
+    form_class = ContactForm
     success_url = '/'
 
     def get_context_data(self, *args, **kwargs):
