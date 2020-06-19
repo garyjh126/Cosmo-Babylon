@@ -11,12 +11,14 @@
         <div class="alert alert-danger alert-dismissible"><button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button> {{ form.non_field_errors }}</div>
-        {% endif %} {% for field in form %}
+    {% endif %}
+    
+    {% for field in form %}
 
         <div class='input-group'>
             <label style='padding: 0px 20px;font-size: 20px;'>
-     Join Mailing List
-    </label>
+                Join Mailing List
+            </label>
         </div>
 
         {% if field.errors %}
@@ -32,6 +34,8 @@
 
         </div>
         <!-- /input-group -->
-        <input type='submit' value='Join' class='btn btn-primary' /> {% endfor %}
+        <input type='submit' value='Join' class='btn btn-primary' /> 
+    
+    {% endfor %}
     </div>
 </form>

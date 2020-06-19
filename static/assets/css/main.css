@@ -114,10 +114,26 @@ input, select, textarea {
 		text-decoration: none;
 	}
 
+	.box-element{
+		box-shadow:hsl(0, 0%, 80%) 0 0 16px;
+		background-color: #5cc6a7;
+		border-radius: 0 0 4px 4px;
+		padding: 10px;
+	}
+
+	.lead {
+		color: #e7e7e7;
+	}
+	
 		a:hover {
 			border-bottom-color: transparent;
 			color: #49bf9d !important;
 			text-decoration: none;
+			filter: opacity(60%);
+		}
+
+		#ecom_image{
+			filter: opacity(85%);
 		}
 
 	strong, b {

@@ -1,1 +1,6 @@
-- Add custom domain name (Find a domain service like name.com)
+- Incorporate functionality for back-end on 'contact' section
+- Insert deployment link for ecommerce site
+- Insert skills
+- Fix loose end on side footer
+- Make Responsive
+- Fix how page should scroll to very top when home link is clicked

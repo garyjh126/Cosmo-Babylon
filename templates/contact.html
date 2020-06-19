@@ -6,7 +6,13 @@
     <p>Have a question or want to work together?</p>
     <div class="row">
         <div class="col-8 col-12-small">
-            <form method="post" action="#">
+            <form class="join-form" method="post" action="">{% csrf_token %}
+                <div class="alert alert-danger alert-dismissible join-form-alert" role="alert" style="display:none">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <span class="join-form-error"></span>
+                </div>
                 <div class="row gtr-uniform gtr-50">
                     <div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
                     <div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
@@ -21,7 +27,7 @@
             <ul class="labeled-icons">
                 <li>
                     <h3 class="icon solid fa-home"><span class="label">Address</span></h3>
-                    431 Brunswick Rd.<br />
+                    Brunswick Rd,<br />
                     Brunswick West, VIC 3055<br />
                     Australia
                 </li>
