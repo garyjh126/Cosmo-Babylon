@@ -1,6 +1,7 @@
 - Incorporate functionality for back-end on 'contact' section
-- Insert deployment link for ecommerce site
+- Fix deployment link name for ecommerce site
 - Insert skills
 - Fix loose end on side footer
 - Make Responsive
 - Fix how page should scroll to very top when home link is clicked
+- Write tests for contact form

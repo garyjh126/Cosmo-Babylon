@@ -9,4 +9,4 @@ class Message(models.Model):
     timestamp = models.DateTimeField("Time of message", auto_now_add=True)
 
     def __str__(self):
-        return str(self.message_id)
+        return str(self.email)

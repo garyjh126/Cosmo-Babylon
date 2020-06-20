@@ -1,27 +1,63 @@
 {% load static %}
-
 <!-- Three -->
 <section id="three">
     <h2>Get In Touch</h2>
+
     <p>Have a question or want to work together?</p>
+    <div id="thanks_message" style="display:none" class="alert alert-success" role="alert">
+        Thank you for your message. You can expect a response very soon.
+    </div>
+    <div id="email_warning" style="display:none" class="alert alert-warning" role="alert">
+        Please enter a valid email address
+    </div>
+
+
     <div class="row">
         <div class="col-8 col-12-small">
-            <form class="join-form" method="post" action="">{% csrf_token %}
-                <div class="alert alert-danger alert-dismissible join-form-alert" role="alert" style="display:none">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <span class="join-form-error"></span>
-                </div>
+            <form id="contact_form" class="join-form" method="post" action="">{% csrf_token %}
+                {{ form.non_field_errors }}
                 <div class="row gtr-uniform gtr-50">
-                    <div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
-                    <div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-                    <div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+                    <div class="col-6 col-12-xsmall">
+                       
+
+                        {{ form.name }}
+                         {% if form.name.errors %}
+                            <div class="alert alert-warning" role="alert">
+                                {{ form.name.errors }}
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="col-6 col-12-xsmall">
+                        
+
+                        {{ form.email }}
+
+                        {% if form.email.errors %}
+                            <div class="alert alert-warning" role="alert">
+                                {{ form.email.errors }}
+                            </div>
+                        {% endif %}
+
+                    </div>
+                    <div class="col-12">
+                        {% if form.content.errors %}
+                            <div class="alert alert-warning" role="alert">
+                                {{ form.content.errors }}
+                            </div>
+                        {% endif %}                        
+                    </div>
+                    
                 </div>
+
+
+                {{ form.content }}
+
+                <ul class="mt-5 actions">
+                    <li><input type="button" class= "btn-submit" value="Send Message"/></li>
+                </ul>
+
             </form>
-            <ul class="actions">
-                <li><input type="submit" value="Send Message" /></li>
-            </ul>
+            
         </div>
         <div class="col-4 col-12-small">
             <ul class="labeled-icons">
@@ -43,3 +79,4 @@
         </div>
     </div>
 </section>
+

@@ -163,3 +163,50 @@ $(window).scroll(function(){
          .end().filter("[href='#"+id+"']").parent().addClass("active");
    }                   
 });
+
+
+/* AJAX ot check if email is already taken */
+
+$("#email").change(function(){
+	var email = ( $(this).val() );
+	
+	$.ajax({
+		url: '/ajax/validate_email/',
+		data: {
+			'email': email
+		},
+		dataType: 'json',
+		success: function(data){
+			if(data.is_valid){
+				$('#email_warning').css("display", "none")
+				
+			}
+			else{
+				$('#thanks_message').css("display", "none")
+				$('#email_warning').css("display", "block")
+			}
+		}
+	});
+});
+
+$("#contact_form .btn-submit").click(function(e){
+	
+
+	$.ajax({
+		url: '/ajax/validate_form/',
+		data: {
+			'name': $('#name').val(),
+			'message': $('#message').val(),
+		},
+		dataType: 'json',
+		success: function(data){
+			console.log("form submit return", data)
+			if(data.is_valid){
+				$('#thanks_message').css("display", "block")
+			}
+			else{
+				$('#thanks_message').css("display", "none")
+			}
+		}
+	});
+});

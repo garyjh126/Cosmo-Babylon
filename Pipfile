@@ -16,6 +16,7 @@ whitenoise = "*"
 psycopg2-binary = "*"
 pylint-django = "*"
 djangorestframework = "*"
+pgadmin4 = "*"
 
 [requires]
 python_version = "3.6"

@@ -101,7 +101,7 @@ SECRET_KEY = get_secret('SECRET_KEY')
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'CosmoBabylonLanding',
+        'NAME': 'cosmobabylonlanding',
         'USER': 'garyharney',
         'PASSWORD': get_secret('DB_PASSWORD'),
         'HOST': 'localhost',

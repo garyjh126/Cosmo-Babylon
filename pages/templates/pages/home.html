@@ -6,6 +6,8 @@
 
 {% include 'navbar.html' %}
 
+{{ form.email.errors }}
+
 {% include 'header.html' %}
 
 <div id="main">
@@ -14,7 +16,7 @@
     
     {% include 'recent_work.html' %}
 
-    {% include 'contact.html' %}
+    {% include 'contact.html' with form=form %}
 
     {% include 'footer.html' %}
 
