@@ -30,18 +30,6 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['landingpage987.herokuapp.com', '.cosmobabylon.com']
 
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_HOST_USER = 'garyjh126@gmail.com' #my gmail username
-# EMAIL_HOST_PASSWORD = 'password' #my gmail password
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-# DEFAULT_FROM_EMAIL = "Gary <garyjh126@gmail.com>"
-
-
-# ADMINS = [('garyjh126', EMAIL_HOST_USER)]
-# MANAGERS = ADMINS
-
-# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
