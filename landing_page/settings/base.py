@@ -27,9 +27,6 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'xoi+a030g1m*ngqw-*+hnp1jy@na@wnzn)iqi*0%3v+@@m41@1'
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -95,7 +92,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'cosmobabylonlanding',
         'USER': 'garyharney',
-        'PASSWORD': get_secret('DB_PASSWORD'),
+        'PASSWORD': SECRET_KEY,
         'HOST': 'localhost',
         'PORT': '',
     }
