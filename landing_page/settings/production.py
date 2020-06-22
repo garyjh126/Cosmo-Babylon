@@ -19,23 +19,11 @@ from django.core.exceptions import ImproperlyConfigured
 BASE_DIR = os.path.dirname(os.path.dirname(
     os.path.dirname(os.path.abspath(__file__))))
 
-
-with open(os.path.join(BASE_DIR, 'secrets.json')) as secrets_file:
-    secrets = json.load(secrets_file)
-
-def get_secret(setting, secrets=secrets):
-    """Get secret setting or fail with ImproperlyConfigured"""
-    try:
-        return secrets[setting]
-    except KeyError:
-        raise ImproperlyConfigured("Set the {} setting".format(setting))
-
+SECRET_KEY = os.environ['SECRET_KEY']
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'xoi+a030g1m*ngqw-*+hnp1jy@na@wnzn)iqi*0%3v+@@m41@1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -102,17 +90,18 @@ WSGI_APPLICATION = 'landing_page.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-SECRET_KEY = get_secret('SECRET_KEY')
+SECRET_KEY = get_secret('DB_PASSWORD')
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'cosmobabylonlanding',
         'USER': 'garyharney',
-        'PASSWORD': get_secret('DB_PASSWORD'),
+        'PASSWORD': SECRET_KEY,
         'HOST': 'localhost',
         'PORT': '',
     }
 }
+
 import dj_database_url
 
 db_from_env = dj_database_url.config()
