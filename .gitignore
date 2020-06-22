@@ -2,3 +2,4 @@ landing_page/settings/local.py
 landing_page/db.sqlite3
 python-getting-started
 /secrets.json
+landing_page/settings/production.py
